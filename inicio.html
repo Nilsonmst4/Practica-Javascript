@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica javascript</title>
+	<link rel="stylesheet"  href="estilos/estilos.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="inicio.html"><i class="home fas fa-home">Inicio </i></a></li>
+				<li><a href="calculadora.html"><i class="calculator fas fa-calculator">Calculadora</i></a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="main">
+		<form action="" class="formulario" id="formulario">
+			<!-- seccion Numero de identificacion -->
+			<div class="formulario__grupo" id="grupo__identificacion">
+				<label for="identificacion" class="formulario__label">Numero de identificacion<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="identificacion" id="identificacion" placeholder="1002464798" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El numero de identificacion tiene que ser de 8 a 10 digitos y solo puede contener. numeros </p>
+			</div>
+			<!-- seccion del celular -->
+			<div class="formulario__grupo" id="grupo__celular">
+				<label for="celular" class="formulario__label">Celular<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="celular" id="celular" placeholder="3135905996" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El numero de celular tiene que ser de 10 digitos y solo puede contener numeros. </p>
+			</div>
+			<!--seccion del Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombres y apellidos<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan Mora" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre solo puede contener texto. </p>
+			</div>
+			<!-- seccion de contacto -->
+			<div class="formulario__grupo" id="grupo__opciones">
+				<label for="identificacion" class="formulario__label">Si necesitamos contactarte telefonicamente, indicanos donde te encuentras<span>*</span></label>
+				<div class="formulario__grupo-opciones">
+					<select class="opciones" id="opciones" name="opciones" required="">
+						<option value="">Selecionar</option>
+						<option value="1">Medellín</option>
+						<option value="2">Manizales</option>
+						<option value="3">Bogota</option>
+						<option value="4">Cali</option>
+						<option value="5">Barranquilla</option>
+					</select>
+				</div>
+				<p class="formulario__input-error">Tienes que elegir una opcion. </p>
+			</div>
+			<!--seccion del nombre -->
+			<div class="formulario__grupo" id="grupo__ocupacion">
+				<label for="ocupacion" class="formulario__label">Area/Ocupacion<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="ocupacion" id="ocupacion" placeholder="Ventas" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El area solo puede contener texto y espacios. </p>
+			</div>
+			<!-- seccion del email -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Email<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="correo" id="correo" placeholder="elmaster@gmail.com" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros y guiones. </p>
+			</div>
+			<!--seccion del cargo -->
+			<div class="formulario__grupo" id="grupo__cargo">
+				<label for="cargo" class="formulario__label">Cargo<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="cargo" id="cargo" placeholder="jefe de Ventas" required="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El cargo solo puede contener textos y espacios. </p>
+			</div>
+			<!-- horario-->
+			<div class="formulario__grupo" id="grupo__horario">
+				<label class="formulario__label" >Horario en el que te podamos contactar<span>*</span></label>
+				<div class="formulario__grupo-input">
+					<!-- hora incial-->
+					<div>
+						<label class="formulario__label">Elige una hora<span> *</span></label>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					<input type="time" class="formulario__input" name="horario" id="horario" required="">
+					</div>
+					
+						
+				</div>
+
+				<p class="formulario__input-error">Tienes que eleigir una hora entre 7:00 am y 4:59 pm. </p>
+			</div>
+			
+			<!-- mensaje de error-->
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario correctamente</p>
+			</div>
+			<!-- boton de enviar-->
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn" onclick="validar();" value="validar">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+	
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"  crossorigin="anonymous"></script>
+</body>
+</html>
